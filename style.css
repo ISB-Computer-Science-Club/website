@@ -1,0 +1,9 @@
+:root {
+  --width: 1000px;
+}
+
+body {
+  margin: auto;
+  font-family: sans-serif;
+  width: 100%;
+}
