@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overpass+Mono:wght@300;400;600;700&display=swap');
+
 :root {
   --width: 1000px;
 }
 
 body {
   margin: auto;
-  font-family: sans-serif;
-  width: 100%;
+  font-family: 'Lato',sans-serif;
+}
+
+.header {
+  background-color: #1b1464;
+  color: #fff;
+}
+
+.header-wrapper { 
+  width: var(--width);
+  margin: auto;
+  padding: 20px 0;
+}
+
+.header-title {
+  margin: 0;
+  font-family: 'Overpass Mono';
+  font-weight: 700;
+}
+
+.body {
+  width: var(--width);
+  margin: auto;
 }
