@@ -7,6 +7,10 @@
     <title>ISB Computer Science Club</title>
 
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css"/>
+
+    <script src="https://kit.fontawesome.com/06b35fec23.js" crossorigin="anonymous"></script>
+
   </head>
   <body>
     <div class="header">
@@ -16,22 +20,95 @@
     </div>
 
     <div class="body">
-      <div class="nextmeeting">
-        <h2 class="nextmeeting-heading">Next Meeting</h2>
+      <div class="intro">
+        <div class="intro-textarea">
+          <h1 class="intro-heading">Welcome to the ISB Computer Science Club</h1>
+          <p class="intro-text">The ISB Computer Science Club is a organization dedicated to learning and teaching programming to students at ISB. </p>
+        </div>
+        <img class="intro-image" src="websitegraphic.svg">
+      </div>
+      <div class="meetings">
+        <h2 class="meetings-heading">Meetings</h2>
+        <div class="meetings-wrapper">
+          <div class="meetings-text">
+            <p class="meetings-nextmeeting-text">The next club meeting is in</p>
+            <h3 class="meetings-nextmeeting-relativetime">1 day and 3 hours</h3>
+            <p class="meetings-nextmeeting-text meetings-nextmeeting-date">on Monday, October 25 in P-03</p>
+            <div class="meetings-nextmeeting-buttons">
+              <a class="button" href="" id="nextmeeting-gdrive">
+                <i class="fab fa-google-drive"></i>
+                <p>Google Drive</p>
+              </a>
+              <a class="button" href="" id="nextmeeting-replit">
+                <i class="fas fa-file-code"></i>
+                <p>Repl.it</p>
+              </a>
+            </div>
+          </div>
+          <div class="meetings-calendar">
+            <div class="meetings-calendar-wrapper" id="calendar"></div>
+            <div class="meetings-calendar-text">
+              <p class="meetings-info meetings-nomeeting" id="meetingdoesntexist">No Meeting That Day</p>
+              <div class="meetings-info" id="meetingexists">
+                <p class="meetings-info-text">
+                  <span class="meetings-info-text-label">Date:</span>
+                  <span class="meetings-info-text-value" id="cal-date"></span>
+                </p>
+                <p class="meetings-info-text">
+                  <span class="meetings-info-text-label">Time:</span>
+                  <span class="meetings-info-text-value" id="cal-time"></span>
+                </p>
+                <p class="meetings-info-text">
+                  <span class="meetings-info-text-label">Location:</span>
+                  <span class="meetings-info-text-value" id="cal-location"></span>
+                </p>
+                <p class="meetings-info-text">
+                  <span class="meetings-info-text-label">Agenda:</span>
+                  <span class="meetings-info-text-value" id="cal-agenda"></span>
+                </p>
+                <a class="button" href="" id="cal-googlebutton">
+                  <i class="fab fa-google-drive"></i>
+                  <p>Google Drive</p>
+                </a>
+                <a class="button" href="" id="cal-replbutton">
+                  <i class="fas fa-file-code"></i>
+                  <p>Repl.it</p>
+                </a>
+              </div>
+              <a class="meetings-addcalendar" href="webcal://api.isb-computer-science-club.repl.co/calendar">
+                <p class="meetings-addcalendar-main">Add To Device Calendar</p>
+                <p class="meetings-addcalendar-sublink">(iOS Calendar, macOS Calendar, Outlook, etc)</p>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="info">
         <h2 class="info-header">Club Info</h2>
+        <p>Our club's main goal is to learn and teach programming to students. People who don't know how to program will be able to learn from fellow students and once they do learn, or if they already know programming, will be able to then teach other students, participate in club and organized competitions and hackathons, as well as complete projects.</p>
+        <p><b>Club Advisor</b>: Ms. Geisler</p>
+        <p><b>Usual Location</b>: ISB Portable 3 (Ms. Geisler/Ms. Velasco's Room)</p>
+        <p><b>Usual Time</b>: Second & fourth Monday of the month after school.</p>
       </div>
     </div>
 
     <div class="footer">
-
+      <div class="footer-wrapper">
+        <b class="footer-text">ISB Computer Science Club</b>
+        <p class="footer-text">Made by the ISB Computer Science Club</p>
+        <a class="footer-link" href="https://github.com/ISB-Computer-Science-Club/website">See How This Was Made</a>
+      </div>
     </div>
 
     <div class="floating">
 
     </div>
-    
+
+    <script src="https://utilities.leoueno.repl.co/browser.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
