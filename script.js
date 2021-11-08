@@ -78,8 +78,8 @@ window.onload = async function() {
   // The next two lines hides the Google Drive and Replit buttons. They will be shown later if it turns out to have Google Drive or Replit links for the meeting.
   $("#nextmeeting-gdrive").hide();
   $("#nextmeeting-replit").hide();
-  // This if statement checks if the meeting object has a property called "gdrive" (which is where the Google Drive links are) and if there is a 'gdrive' property, it checks if the length of the value is greater than 0. (So as to make sure it isn't a empty string.)
-  if(
+  // This if statement checks if the meeting object has a property called "gdrive" (which is where the Google Drive links are) and if there is a 'gdrive' property, it checks if the length of the value is greater than 0. (So as to make sure it isn't a empty string.
+  /*if(
     nextMeeting.data.hasOwnProperty("gdrive")
     && // && is a "operator" for if functions. It tells the computer to excecute the if function only if both of them are true. If either or none of them are true, it will return false.
     nextMeeting.data.gdrive.length > 0
@@ -98,6 +98,19 @@ window.onload = async function() {
     console.log("replit exists")
     $("#nextmeeting-replit").attr("href",nextMeeting.data.replit);
     $("#nextmeeting-replit").show();
+  }*/
+  for(i in nextMeeting.data.buttons) {
+    var buttonName = i
+    var buttonLink = nextMeeting.data.buttons[i]
+    console.log(buttonName,buttonLink)
+
+    var newElement = document.createElement("a")
+    console.log(newElement)
+    newElement.classList.add("button")
+    newElement.href = buttonLink
+    newElement.innerText = buttonName
+
+    document.getElementById("meetings-nextmeeting-buttons").appendChild(newElement)
   }
 
   // ===== SETS UP THE CALENDAR ======
