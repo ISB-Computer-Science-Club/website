@@ -150,7 +150,7 @@ window.onload = async function() {
         $("#cal-googlebutton").hide();
         $("#cal-replbutton").hide();
         // Lines  to  check if there are Google Drive or Repl.it links and if there are, show them and change the button link.
-        if(
+        /*if(
           meeting.data.hasOwnProperty("gdrive")
           &&
           meeting.data.gdrive.length > 0
@@ -165,6 +165,20 @@ window.onload = async function() {
         ) {
           $("#cal-replbutton").attr("href",meeting.data.replit);
           $("#cal-replbutton").show();
+        }*/
+        $("#meetingexists > a").remove()
+        for(i in meeting.data.buttons) {
+          var buttonName = i
+          var buttonLink = meeting.data.buttons[i]
+          console.log(buttonName,buttonLink)
+
+          var newElement = document.createElement("a")
+          console.log(newElement)
+          newElement.classList.add("button")
+          newElement.href = buttonLink
+          newElement.innerText = buttonName
+
+          document.getElementById("meetingexists").appendChild(newElement);
         }
 
         // SHow the meeting information section.
