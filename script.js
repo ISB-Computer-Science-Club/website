@@ -144,7 +144,7 @@ window.onload = async function() {
         $("#cal-date").text(meeting.data.date);
         $("#cal-time").text(meeting.data.start);
         $("#cal-location").text(meeting.data.place);
-        $("#cal-agenda").text(meeting.data.agenda);
+        $("#cal-agenda").text(meeting.data.agenda.replace(/(?:\r\n|\r|\n)/g, '<br>'););
 
         // Hides the buttons.
         $("#cal-googlebutton").hide();
